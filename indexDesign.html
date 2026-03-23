@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Project</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        /* Additional styles for this page */
+        .language {
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 100%;
+            text-align: left;
+            /* background: rgba(15, 20, 25, 0.8); */
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+        
+        #barLang {
+            width:100%;
+            height:10px;
+            background:#1a2333;
+            border-radius:8px;
+            overflow:hidden;
+            display:flex;
+            margin: 10px 0;
+        }
+        
+        .segment {
+            height:100%;
+            transition:width .6s ease;
+        }
+        
+        #languagesWEB {
+            margin-top:15px;
+            font-size:14px;
+        }
+        
+        .item {
+            display:flex;
+            align-items:center;
+            gap:6px;
+            margin-bottom:6px;
+        }
+        
+        .dot {
+            width:12px;
+            height:12px;
+            border-radius:3px;
+        }
+        
+        .project-stats {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            color: #00ff41;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #00ff41;
+        }
+        
+        .loading-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #00ff41;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* ==================== */
+        /*      MEDIA MOBILE   */
+        /* ===================== */
+        @media (max-width: 768px) {
+            .project-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        
+            .stat {
+                width: 100%;
+            }
+            .pageDESIGNsite{
+                flex-direction: column;
+                padding: 10px;
+                width: 100%;
+
+            }
+            
+             .pageElelementDESIGN, .pageImageDESIGN {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px){
+            .project-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        
+            .stat {
+                width: 100%;
+            }
+            .pageDESIGNsite{
+                flex-direction: column;
+                padding: 10px;
+                width: 100%;
+
+            }
+            
+             .pageElelementDESIGN, .pageImageDESIGN {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="constainerDESIGN">
+        <div class="pageDESIGNsite">
+            <div class="pageElelementDESIGN">
+                <div class="boxlivaGit1">
+                    <div class="cart1">
+                        <img src="./image/my-photo.webp" alt="profile">
+                        <a id="viewLink" href="#" target="_blank">
+                            view <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a id="codeLink" href="#" target="_blank">
+                            code <i class="fab fa-github"></i>
+                        </a>
+                        <p>
+                            <a href="./index.html"><i class="fas fa-angle-left"></i> Back</a>
+                        </p>
+                    </div>
+                    <div class="cart2">
+                        <p id="projectTitle">Loading Project...</p>
+                    </div>
+                </div>
+
+                <!-- Design Tools Section -->
+                <div class="boxDescription">
+                    <!-- Design Tools Statistics -->
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-value" id="totalDesignTools">3</div>
+                            <div class="stat-label">Design Tools</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" id="mainDesignTool">-</div>
+                            <div class="stat-label">Main Tool</div>
+                        </div>
+                    </div>
+
+                    <div class="language">
+                        <p id="status">Loading design tools from project...</p>
+                
+                        <div id="barLang"></div>
+                
+                        <div id="languagesWEB"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pageImageDESIGN">
+                <div class="imageBoxDESIGN">
+                    <img id="projectImage" src="" alt="Project Image" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Anime.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script>
+            // ============================================
+            // ANIME.JS ANIMATIONS (badal GSAP)
+            // ============================================
+        
+            document.addEventListener('DOMContentLoaded', async function () {
+                const projectData = JSON.parse(localStorage.getItem('selectedProject'));
+            
+                if (!projectData) {
+                    window.location.href = 'index.html';
+                    return;
+                }
+            
+                // Update basic info
+                document.getElementById('projectTitle').textContent = projectData.title || 'Design Project';
+                document.getElementById('projectImage').src = projectData.image || '';
+            
+                const viewLink = document.getElementById('viewLink');
+                const codeLink = document.getElementById('codeLink');
+            
+                if (projectData.liveDemo && projectData.liveDemo !== '#') {
+                    viewLink.href = projectData.liveDemo;
+                } else {
+                    viewLink.style.display = 'none';
+                }
+            
+                // For design projects, hide GitHub link by default
+                codeLink.style.display = 'none';
+            
+                // Load design tools data
+                await loadDesignTools(projectData);
+            
+                // ============================================
+                // ANIME.JS ANIMATIONS
+                // ============================================
+        
+                // Main container fade in
+                anime({
+                    targets: '.pageDESIGNsite',
+                    opacity: [0, 1],
+                    translateY: [50, 0],
+                    duration: 1000,
+                    easing: 'easeOutCubic'
+                });
+        
+                // Segments animation - Slide from 0 to final width
+                anime({
+                    targets: '.segment',
+                    width: function(el) {
+                        return el.getAttribute('data-final-width') + '%';
+                    },
+                    duration: 1500,
+                    delay: anime.stagger(200), // Wa7ed mor wa7ed
+                    easing: 'easeOutCubic'
+                });
+            });
+        
+            async function loadDesignTools(projectData) {
+                const status = document.getElementById('status');
+                const barLang = document.getElementById('barLang');
+                const languagesWEB = document.getElementById('languagesWEB');
+        
+                // Show loading
+                status.innerHTML = '<div class="loading-spinner"></div> Loading design tools data...';
+                barLang.innerHTML = '';
+                languagesWEB.innerHTML = '';
+        
+                try {
+                    // Mock design tools data
+                    const designTools = [
+                        { name: 'Adobe XD', percentage: 40 },
+                        { name: 'Photoshop', percentage: 30 },
+                        { name: 'Figma', percentage: 20 },
+                        { name: 'Illustrator', percentage: 10 }
+                    ];
+        
+                    // Calculate total percentage
+                    const totalPercentage = designTools.reduce((sum, tool) => sum + tool.percentage, 0);
+        
+                    // Update statistics
+                    document.getElementById('totalDesignTools').textContent = designTools.length;
+                    document.getElementById('mainDesignTool').textContent = designTools[0]?.name || '-';
+        
+                    // Create design tools bar
+                    designTools.forEach(tool => {
+                        // Create segment for bar - BDA MEN 0%
+                        const segment = document.createElement('div');
+                        segment.className = 'segment';
+                        segment.style.width = '0%'; // Start from 0 for animation
+                        segment.style.backgroundColor = getRandomColor();
+                        segment.setAttribute('data-final-width', tool.percentage); // Store final width
+                        barLang.appendChild(segment);
+        
+                        // Create legend item
+                        const item = document.createElement('div');
+                        item.className = 'item';
+                        item.innerHTML = `
+                            <div class="dot" style="background-color: ${segment.style.backgroundColor}"></div>
+                            <strong>${tool.name}</strong> — ${tool.percentage}%
+                        `;
+                        languagesWEB.appendChild(item);
+                    });
+        
+                    // Update status
+                    status.textContent = `Design tools used in this project:`;
+        
+                    // If no design tools found
+                    if (designTools.length === 0) {
+                        status.textContent = 'No design tools data found for this project.';
+                        languagesWEB.innerHTML = '<p style="color: #aaa; text-align: center;">No design tools data available</p>';
+                    }
+        
+                } catch (error) {
+                    console.error('Error loading design tools:', error);
+                    status.textContent = `Error loading design tools: ${error.message}`;
+        
+                    // Show fallback message
+                    languagesWEB.innerHTML = `
+                        <div style="background: rgba(255, 0, 0, 0.1); color: #ff6b6b; padding: 10px; border-radius: 8px; border: 1px solid rgba(255, 0, 0, 0.3);">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Failed to load design tools data.
+                        </div>
+                    `;
+                }
+            }
+        
+            function getRandomColor() {
+                const hue = Math.floor(Math.random() * 360);
+                return `hsl(${hue}, 70%, 55%)`;
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page My</title>
+    <!-- this icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- this is link css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- this is link css -->
+   
+</head>
+<body>
+    <!-- &===== Loading Screen ===== -->
+    <div id="loading-screen">
+      <img src="./image/logo.webp" alt="Logo" class="loading-logo">
+      <div class="loading-text">MOUSSAOUI</div>
+      <div class="loading-subtitle">PORTFOLIO</div>
+      <div class="loading-bar">
+        <div class="loading-bar-fill"></div>
+        <div class="loading-percentage">0%</div>
+      </div>
+      
+    </div>
+
+    <!-- &===== Navbar ===== -->
+    
+    <header>
+        <div class="logo">
+            <img src="./image/logo.webp" alt="Logo">
+        </div>
+    
+        <nav class="desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+       
+        <div class="icone">
+            <i class="fa-solid fa-code"></i>
+        </div>
+    </header>
+    
+    <nav class="mobile-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <!-- &===== Hero ===== -->
+    <section class="hero" id="home">
+      <h1>Full-Stack Developer<br><span>Creative Designer</span></h1>
+      <p>I build modern web applications with clean code and intuitive design using Adobe tools.</p>
+      <div class="btns">
+        <a href="#project" class="btn">View My Work</a>
+        <a href="#contact" class="btn alt">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- &===== About ===== -->
+    <section class="about" id="about">
+      <h2 class="h2">ABOUT</h2>
+      
+      <div class="about-box">
+        <img class="my-photo" src="./image/my-photo.webp" alt="Profile">
+        <div class="elementBOX">
+          <div class="text">
+            <h3>Hi, I'm Mohammed Moussaoui</h3>
+            <p>A passionate full-stack developer and designer. I enjoy turning ideas into digital products that are both functional and visually engaging. 
+            I specialize in responsive web apps using HTML, CSS, JS, Python, Flask, and C — plus creativity with Adobe XD &amp; Photoshop.</p>
+          </div>
+          <div class="language">
+            <p id="status">Loading languages...</p>
+    
+            <div id="bar"></div>
+    
+            <div id="languages"></div>
+          </div>
+        </div>
+        <div class="right-progress">
+          <div class="circle">
+              <svg viewBox="0 0 36 36">
+                  <path class="circle-bg"
+                      d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                  <path class="circle-progress"
+                      stroke-dasharray="0, 100" 
+                      d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                  <text x="18" y="20.35" class="percentage"></text>
+              </svg>
+          </div>
+      </div>
+
+      </div>
+      
+      
+      <section class="skills">
+        <div class="slider">
+          <div class="slide-track">
+            <img src="./image/html-1.svg" alt="HTML">
+            <img src="./image/css-3.svg" alt="CSS">
+            <img src="./image/javascript-r.svg" alt="JS">
+            <img src="./image/python-5.svg" alt="Python">
+            <img src="./image/c-1.svg" alt="C">
+            <img src="./image/figma-icon.svg" alt="Figma">
+            <img src="./image/adobe-photoshop-2.svg" alt="Photoshop">
+            <img src="./image/adobe-xd-1.svg" alt="XD">
+            <img src="./image/bash-2.svg" alt="Bash">
+            <img src="./image/git-icon.svg" alt="Git">
+            <img src="./image/github-icon-1.svg" alt="GitHub">
+            <img src="./image/vimlogo.svg" alt="Vim">
+
+            <!-- duplicated for infinite loop -->
+            <img src="./image/html-1.svg" alt="HTML">
+            <img src="./image/css-3.svg" alt="CSS">
+            <img src="./image/javascript-r.svg" alt="JS">
+            <img src="./image/python-5.svg" alt="Python">
+            <img src="./image/c-1.svg" alt="C">
+            <img src="./image/figma-icon.svg" alt="Figma">
+            <img src="./image/adobe-photoshop-2.svg" alt="Photoshop">
+            <img src="./image/adobe-xd-1.svg" alt="XD">
+            <img src="./image/bash-2.svg" alt="Bash">
+            <img src="./image/git-icon.svg" alt="Git">
+            <img src="./image/github-icon-1.svg" alt="GitHub">
+            <img src="./image/vimlogo.svg" alt="Vim">
+          </div>
+        </div>
+      </section>
+    </section>
+  
+  <!-- &===== Projects ===== -->
+    <section class="project" id="project">
+      <h2>PROJECTS</h2>
+    
+      <!-- FILTER BUTTONS -->
+    <div class="all-button">
+        <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="website">Website</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="app">Apps</button>
+    </div>
+    
+      <!-- PROJECT GRID -->
+      <div class="project-grid">
+          <!-- Website Projects -->
+          <div class="card" data-category="website">
+              <div class="card-image">
+                  <img src="./image/Template-html-cssImage.webp" alt="E-commerce Website">
+              </div>
+              <div class="card-content">
+                  <h3>Template-html-css</h3>
+                  <p>A fully responsive e-commerce website with shopping cart, payment integration, and user dashboard.</p>
+                  <div class="card-tags">
+                      <span class="card-tag">HTML</span>
+                      <span class="card-tag">CSS</span>
+                      
+                </div>
+                <a href="indexWEBsite.html"
+                        class="project-link"
+                        data-title="Template-html-css"
+                        data-image="./image/Template-html-cssImage.webp"
+                        data-github="https://api.github.com/repos/simo-SM/Template-html-css/languages"
+                        data-repo-url="https://github.com/simo-SM/Template-html-css"
+                        data-live-demo="https://simo-sm.github.io/Template-html-css/">
+                        View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+          </div>
+        <!-- pr2 -->
+         
+          <div class="card" data-category="website">
+              <div class="card-image">
+                  <img src="./image/layaliAliraqwebsite.webp" alt="Restaurant Website">
+              </div>
+              <div class="card-content">
+                  <h3>layali-aliraq-official-site</h3>
+                  <p>Responsive website for Layali Al Iraq restaurant showcasing authentic Iraqi cuisine, menu, gallery, and contact information.</p>
+                  <div class="card-tags">
+                      <span class="card-tag">HTML</span>
+                      <span class="card-tag">css(tailwind)</span>
+                      <span class="card-tag">JavaScript</span>
+                </div>
+                <a href="indexWEBsite.html"
+                        class="project-link"
+                        data-title="layali-aliraq-official-site"
+                        data-image="./image/layaliAliraqwebsite.webp"
+                        data-github="https://api.github.com/repos/simo-SM/layali-aliraq-official-site/languages"
+                        data-repo-url="https://github.com/simo-SM/layali-aliraq-official-site"
+                        data-live-demo="https://simo-sm.github.io/layali-aliraq-official-site">
+                        View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                </div>
+            </div>
+            <!-- pr3 -->
+
+            <div class="card" data-category="website">
+                <div class="card-image">
+                    <img src="./image/websitGymPhoto.webp" alt="Gym Fitness Landing Page">
+                </div>
+                <div class="card-content">
+                    <h3>Gym-Fitness-Landing-Page</h3>
+                    <p>Responsive gym landing page with animations, program cards, membership plans, and WhatsApp contact.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">HTML</span>
+                        <span class="card-tag">CSS(Tailwind)</span>
+                        <span class="card-tag">JavaScript</span>
+                    </div>
+                    <a href="indexWEBsite.html"
+                          class="project-link"
+                          data-title="Gym-Fitness-Landing-Page"
+                          data-description="Responsive gym landing page with animations, program cards, membership plans, and WhatsApp contact."
+                          data-image="./image/websitGymPhoto.webp"
+                          data-github="https://api.github.com/repos/simo-SM/Gym-Fitness-Landing-Page-/languages"
+                          data-repo-url="https://github.com/simo-SM/Gym-Fitness-Landing-Page-"
+                          data-live-demo="https://simo-sm.github.io/Gym-Fitness-Landing-Page-/">
+                          View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+          <!-- Design Projects -->
+          <div class="card" data-category="design">
+              <div class="card-image">
+                  <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Mobile App Design">
+              </div>
+              <div class="card-content">
+                  <h3>Fitness App UI</h3>
+                  <p>User interface design for a fitness tracking mobile application with workout plans and progress tracking.</p>
+                  <div class="card-tags">
+                      <span class="card-tag">Figma</span>
+                      <span class="card-tag">UI Design</span>
+                      <span class="card-tag">Prototyping</span>
+                  </div>
+                  <a href="./indexDesign.html" 
+                    class="project-link"
+                    data-image="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
+                    >
+                    View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+        
+          <div class="card" data-category="design">
+              <div class="card-image">
+                  <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Website Design">
+              </div>
+              <div class="card-content">
+                  <h3>Portfolio Website Design</h3>
+                  <p>Modern and creative portfolio website design with dark mode and smooth animations.</p>
+                  <div class="card-tags">
+                      <span class="card-tag">Adobe XD</span>
+                      <span class="card-tag">UI/UX</span>
+                      <span class="card-tag">Wireframing</span>
+                  </div>
+                  <a href="./indexDesign.html" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+              </div>
+          </div>
+        
+          <!-- App Projects -->
+          <div class="card" data-category="app">
+              <div class="card-image">
+                  <img src="./image/photoAPP.webp" alt="Food Delivery App">
+              </div>
+              <div class="card-content">
+                  <h3>Food Delivery App</h3>
+                  <p>Mobile application for food ordering and delivery with real-time tracking and payment options.</p>
+                  <div class="card-tags">
+                      <span class="card-tag">Flutter</span>
+                      <span class="card-tag">Dart</span>
+                      <span class="card-tag">Google Maps API</span>
+                  </div>
+                  <a href="indexWEBsite.html"
+                        class="project-link"
+                        data-title="Food Delivery App"
+                        data-description="Mobile application for food ordering and delivery with real-time tracking and payment options. Built with Flutter and Dart."
+                        data-image="./image/photoAPP.webp"
+                        data-github="https://api.github.com/repos/simo-SM/Food-Delivery-App/languages"
+                        data-repo-url="https://github.com/simo-SM/Food-Delivery-App"
+                        data-live-demo="#">
+                        View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+              </div>
+          </div>
+
+          <div class="card" data-category="app">
+            <div class="card-image">
+                <img src="./image/appCyberFile.webp" alt="Food Delivery App">
+            </div>
+            <div class="card-content">
+                <h3>Cyber File App</h3>
+                <p>Real-time file monitoring system with automated alerts and logging for enhanced system security.</p>
+                <div class="card-tags">
+                    <span class="card-tag">HTML</span>
+                    <span class="card-tag">CSS(Tailwind)</span>
+                    <span class="card-tag">JavaScript AND PYTHON</span>
+                </div>
+                <a href="indexWEBsite.html"
+                      class="project-link"
+                      data-title="Food Delivery App"
+                      data-description="Real-time file monitoring system with automated alerts and logging for enhanced system security."
+                      data-image="./image/appCyberFile.webp"
+                      data-github="https://api.github.com/repos/simo-SM/cybr-file1/languages"
+                      data-repo-url="https://github.com/simo-SM/cybr-file1"
+                      data-live-demo="https://simo-sm.github.io/cybr-file1/">
+                      View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+          <!-- More Projects -->
+          <div class="card" data-category="website">
+              <div class="card-image">
+                  <img src="./image/ChahdCham.webp" alt="Analytics Dashboard">
+              </div>
+              <div class="card-content">
+                  <h3>Chahd Cham Food Ordering Web App</h3>
+                  <p>About Chahd Cham restaurant menu and ordering system with WhatsApp checkout.</p>
+                  <div class="card-tags">
+                      <span class="card-tag">HTML</span>
+                      <span class="card-tag">css(tailwind)</span>
+                      <span class="card-tag">JavaScript</span>
+                  </div>
+                  <a href="indexWEBsite.html"
+                        class="project-link"
+                        data-title="Chahd Cham Food Ordering Web App"
+                        data-description="Interactive data visualization dashboard with charts, graphs, and real-time updates. Built with Vue.js and D3.js."
+                        data-image="./image/ChahdCham.webp"
+                        data-github="https://api.github.com/repos/simo-SM/chahd-cham-webapp/languages"
+                        data-repo-url="https://github.com/simo-SM/chahd-cham-webapp/"
+                        data-live-demo="https://simo-sm.github.io/chahd-cham-webapp/">
+                        View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+              </div>
+          </div>
+        
+          <div class="card" data-category="design">
+              <div class="card-image">
+                  <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80" alt="Brand Identity">
+              </div>
+              <div class="card-content">
+                    <h3>Brand Identity Design</h3>
+                    <p>Complete brand identity package including logo, color palette, typography, and style guide.</p>
+                <div class="card-tags">
+                        <span class="card-tag">Logo Design</span>
+                        <span class="card-tag">Branding</span>
+                        <span class="card-tag">Illustrator</span>
+                </div>
+                <!-- <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                <a href="indexDesign.html"
+                    class="project-link"
+                    data-title="Brand Identity Design"
+                    data-image="https://images.unsplash.com/photo-1561070791-2526d30994b5"
+                    data-live-demo="#">
+                    View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+          </div>
+        
+          <div class="card" data-category="app">
+              <div class="card-image">
+                  <img src="./image/photoAPP.webp" alt="Social Media App">
+              </div>
+              <div class="card-content">
+                  <h3>Social Media App</h3>
+                  <p>Mobile application for social networking with posts, comments, likes, and direct messaging.</p>
+                  <div class="card-tags">
+                      <span class="card-tag">React Native</span>
+                      <span class="card-tag">Node.js</span>
+                      <span class="card-tag">MongoDB</span>
+                  </div>
+                  <a href="indexWEBsite.html" class="project-link"
+                    data-title="Social Media App"
+                    data-description="Mobile application"
+                    data-image="./image/photoAPP.webp"
+                    data-github="https://api.github.com/repos/simo-SM/social-media-app/languages"
+                    data-live-demo="#">
+
+                    View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+      </div>
+    
+      <!-- SHOW MORE BUTTON -->
+      <div class="show-more-container">
+          <button id="showMoreBtn">
+            <i class="fa-etch fa-solid fa-angle-left"></i>
+            <i class="fa-etch fa-solid fa-angle-right"></i></button>
+      </div>
+    </section>
+  <!-- &===== Contact ===== -->
+  <section class="contact" id="contact">
+    <h2>Get In Touch</h2>
+    <p>Have a project in mind? Feel free to reach out to me. I'm here to help you turn your ideas into reality.</p>
+    
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Let's Work Together</h3>
+            <p>I'm always excited to collaborate on new and innovative projects. Don't hesitate to contact me with any inquiries.</p>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Phone</h4>
+                        <span>+212 0608173585</span>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <span>mhammed.dev.design@gmail.com</span>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Address</h4>
+                        <span>Tetouan, Morocco</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Follow Me</h3>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/simo-SM" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.behance.net/simopython" class="social-link">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+            
+            <a 
+                href="https://wa.me/+212608173585?text=Hello%20Mohammed" 
+                class="whatsapp-btn" 
+                target="_blank">
+                <i class="fab fa-whatsapp"></i> Message on WhatsApp
+            </a>
+
+        </div>
+        
+        <div class="contact-form">
+            <h3>Send Me a Message</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" class="form-control" placeholder="Message subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" placeholder="Enter your message here..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+                
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Thank you for your message! I'll get back to you soon.
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105731.86199689753!2d-5.439672700000001!3d35.588899499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b7452b7b7c26b%3A0x6f6b9b6a9e7c6e6f!2sTetouan%2C%20Morocco!5e0!3m2!1sen!2s!4v1692181012345!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  
+  <!-- email js  -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!--  Anime.js -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

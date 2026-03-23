@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page | Website</title>
+    <!-- this icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Additional styles for this page */
+        .language {
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 100%;
+            text-align: left;
+            /* background: rgba(15, 20, 25, 0.8); */
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+        
+        #barLang {
+            width:100%;
+            height:10px;
+            background:#1a2333;
+            border-radius:8px;
+            overflow:hidden;
+            display:flex;
+            margin: 10px 0;
+        }
+        
+        .segment {
+            height:100%;
+            transition:width .6s ease;
+        }
+        
+        #languagesWEB {
+            margin-top:15px;
+            font-size:14px;
+        }
+        
+        .item {
+            display:flex;
+            align-items:center;
+            gap:6px;
+            margin-bottom:6px;
+        }
+        
+        .dot {
+            width:12px;
+            height:12px;
+            border-radius:3px;
+        }
+        
+        .project-stats {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            color: #00ff41;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #00ff41;
+        }
+        
+        .loading-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid #00ff41;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* ====================== */
+        /*   media this mobile     */
+        /* ====================== */
+        @media (max-width: 990px) {
+            .pageWEBsite {
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px;
+            }
+            .pageElelement {
+                width: 100%;
+            }
+            .boxlivaGit {
+                text-align: center;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+            }
+        
+            .imageWEB{
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+            }
+            .imageWEB img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+            }
+        }
+        @media (max-width: 768px) {
+            .project-stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .stat {
+                width: 100%;
+            }
+            .pageWEBsite{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+            }
+            .boxlivaGit {
+                text-align: center;
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 10px;
+            }
+            .imageWEB{
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+            }
+            .imageWEB img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+            }
+        }
+        @media (max-width: 480px){
+            .boxlivaGit {
+                font-size: 10px;
+                gap: 10px;
+                width: 100%;
+                padding: 20px;
+            }
+            .pageWEBsite{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+                margin: 10px 0;
+            }
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="constainerWEB">
+        <div class="pageWEBsite">
+            <div class="pageElelement">
+                <div class="boxlivaGit">
+                    <div class="cart1">
+                        <img src="./image/my-photo.webp" alt="profile">
+                        <a id="viewLink" href="#" target="_blank">
+                            view <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a id="codeLink" href="#" target="_blank">
+                            code <i class="fab fa-github"></i>
+                        </a>
+                        <p>
+                            <a href="./index.html"><i class="fas fa-angle-left"></i> Back</a>
+                        </p>
+                    </div>
+                    <div class="cart2">
+                        <p id="projectTitle">Loading Project...</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="boxDescription">
+                    <!-- Project Statistics -->
+                    <div class="project-stats">
+                        <div class="stat">
+                            <div class="stat-value" id="totalLanguages">0</div>
+                            <div class="stat-label">Languages</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" id="totalBytes">0</div>
+                            <div class="stat-label">Total Bytes</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" id="mainLanguage">-</div>
+                            <div class="stat-label">Main Language</div>
+                        </div>
+                    </div>
+                    
+                    <div class="language">
+                        <p id="status">Loading languages from GitHub...</p>
+                
+                        <div id="barLang"></div>
+                
+                        <div id="languagesWEB"></div>
+                    </div>
+            </div>
+            </div>
+            <div class="pageImageWeb">
+                <div class="imageWEB">
+                    <img id="projectImage" src="" alt="Project Image" />
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- ================================= -->
+    
+
+    <!--  Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Get project data from localStorage
+            const projectData = JSON.parse(localStorage.getItem('selectedProject'));
+            
+            if (!projectData) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // Update basic project info
+            document.getElementById('projectTitle').textContent = projectData.title || 'Project';
+            document.getElementById('projectImage').src = projectData.image || '';
+            
+            // Set links
+            const viewLink = document.getElementById('viewLink');
+            const codeLink = document.getElementById('codeLink');
+            
+            if (projectData.liveDemo && projectData.liveDemo !== '#') {
+                viewLink.href = projectData.liveDemo;
+            } else if (projectData.repoUrl) {
+                viewLink.href = projectData.repoUrl;
+            } else {
+                viewLink.style.display = 'none';
+            }
+            
+            if (projectData.repoUrl) {
+                codeLink.href = projectData.repoUrl;
+            } else {
+                codeLink.style.display = 'none';
+            }
+            
+            // Load languages from GitHub API
+            await loadProjectLanguages(projectData);
+            
+            // ============================================
+            // ANIME.JS ANIMATIONS (badal GSAP)
+            // ============================================
+            
+            // Main container entrance
+            anime({
+                targets: '.pageWEBsite',
+                opacity: [0, 1],
+                translateY: [50, 0],
+                duration: 1000,
+                easing: 'easeOutCubic'
+            });
+            
+            // Segments animation - Slide from 0 to final width
+            anime({
+                targets: '.segment',
+                width: function(el) {
+                    return el.getAttribute('data-width'); 
+                },
+                duration: 1500,
+                delay: anime.stagger(200), 
+                easing: 'easeOutCubic'
+            });
+        });
+        
+        async function loadProjectLanguages(projectData) {
+            const status = document.getElementById('status');
+            const barLang = document.getElementById('barLang');
+            const languagesWEB = document.getElementById('languagesWEB');
+            
+            // Show loading
+            status.innerHTML = '<div class="loading-spinner"></div> Fetching language data from GitHub...';
+            barLang.innerHTML = '';
+            languagesWEB.innerHTML = '';
+            
+            // Check if we have GitHub API URL
+            if (!projectData.githubApiUrl) {
+                status.textContent = 'No GitHub API URL provided for this project.';
+                return;
+            }
+            
+            try {
+                // Fetch languages from GitHub API
+                const response = await fetch(projectData.githubApiUrl);
+                
+                if (!response.ok) {
+                    throw new Error(`GitHub API error: ${response.status}`);
+                }
+                
+                const languagesData = await response.json();
+                
+                // Calculate total bytes
+                const totalBytes = Object.values(languagesData).reduce((sum, bytes) => sum + bytes, 0);
+                
+                // Sort languages by percentage
+                const languagesArray = Object.entries(languagesData)
+                    .map(([lang, bytes]) => ({
+                        name: lang,
+                        bytes: bytes,
+                        percentage: ((bytes / totalBytes) * 100).toFixed(1)
+                    }))
+                    .sort((a, b) => b.percentage - a.percentage);
+                
+                // Update statistics
+                document.getElementById('totalLanguages').textContent = languagesArray.length;
+                document.getElementById('totalBytes').textContent = totalBytes.toLocaleString();
+                document.getElementById('mainLanguage').textContent = languagesArray[0]?.name || '-';
+                
+                // Create language bar
+                languagesArray.forEach((lang, index) => {
+                    // Create segment for bar - BDA MEN 0%
+                    const segment = document.createElement('div');
+                    segment.className = 'segment';
+                    segment.style.width = '0%'; // Start from 0 for animation
+                    segment.setAttribute('data-width', `${lang.percentage}%`); // Store final width
+                    segment.style.backgroundColor = getRandomColor();
+                    barLang.appendChild(segment);
+                    
+                    // Create legend item
+                    const item = document.createElement('div');
+                    item.className = 'item';
+                    item.innerHTML = `
+                        <div class="dot" style="background-color: ${segment.style.backgroundColor}"></div>
+                        <strong>${lang.name}</strong> — ${lang.percentage}% (${lang.bytes.toLocaleString()} bytes)
+                    `;
+                    languagesWEB.appendChild(item);
+                });
+                
+                // Update status
+                status.textContent = `Languages used in this project:`;
+                
+                // If no languages found
+                if (languagesArray.length === 0) {
+                    status.textContent = 'No language data found for this repository.';
+                    languagesWEB.innerHTML = '<p style="color: #aaa; text-align: center;">No language data available</p>';
+                }
+                
+            } catch (error) {
+                console.error('Error fetching languages:', error);
+                status.textContent = `Error loading languages: ${error.message}`;
+                
+                // Show fallback message
+                languagesWEB.innerHTML = `
+                    <div style="background: rgba(255, 0, 0, 0.1); color: #ff6b6b; padding: 10px; border-radius: 8px; border: 1px solid rgba(255, 0, 0, 0.3);">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Failed to load language data. Possible reasons:
+                        <ul style="margin: 5px 0 0 20px; font-size: 0.9rem;">
+                            <li>Repository might be private</li>
+                            <li>GitHub API rate limit exceeded</li>
+                            <li>Invalid repository URL</li>
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+        
+        function getRandomColor() {
+            // Generate a pleasant color
+            const hue = Math.floor(Math.random() * 360);
+            return `hsl(${hue}, 70%, 55%)`;
+        }
+    </script>
+</body>
+</html>
